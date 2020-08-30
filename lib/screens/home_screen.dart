@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:phuoc_nguyen_covid/constants.dart';
-import 'package:phuoc_nguyen_covid/screens/info_card.dart';
-import 'package:phuoc_nguyen_covid/widgets/line_chart.dart';
+import 'package:phuoc_nguyen_covid/screens/details_screen.dart';
+import 'package:phuoc_nguyen_covid/widgets/info_card.dart';
 
 class HomeScreen extends StatelessWidget {
   @override
@@ -15,7 +15,7 @@ class HomeScreen extends StatelessWidget {
           children: [
             Container(
               padding:
-                  EdgeInsets.only(left: 20, top: 20, right: 20, bottom: 40),
+                  EdgeInsets.only(left: 20, top: 10, right: 20, bottom: 30),
               width: double.infinity,
               decoration: BoxDecoration(
                 color: kPrimaryColor.withOpacity(0.03),
@@ -31,28 +31,40 @@ class HomeScreen extends StatelessWidget {
                   InfoCard(
                     title: 'Confirmed Cases',
                     iconColor: Color(0xffff9c00),
-                    effectedNum: 1062,
+                    effectedNum: 24993226,
+                    press: () {
+                      Navigator.pushNamed(context, DetailsScreen.routeNamed);
+                    },
                   ),
                   InfoCard(
                     title: 'Total Deaths',
                     iconColor: Color(0xffff2d55),
-                    effectedNum: 75,
+                    effectedNum: 842455,
+                    press: () {
+                      Navigator.pushNamed(context, DetailsScreen.routeNamed);
+                    },
                   ),
                   InfoCard(
                     title: 'Total Recovered',
                     iconColor: Color(0xff50e3c2),
-                    effectedNum: 456,
+                    effectedNum: 16408120,
+                    press: () {
+                      Navigator.pushNamed(context, DetailsScreen.routeNamed);
+                    },
                   ),
                   InfoCard(
                     title: 'New Cases',
                     iconColor: Color(0xff583412),
-                    effectedNum: 75,
+                    effectedNum: 261938,
+                    press: () {
+                      Navigator.pushNamed(context, DetailsScreen.routeNamed);
+                    },
                   ),
                 ],
               ),
             ),
             SizedBox(
-              height: 20,
+              height: 10,
             ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20),
